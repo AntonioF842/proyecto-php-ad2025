@@ -21,7 +21,7 @@
     $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
     registerAuthRoutes($method, $uri);
-    registerEmpleadosRoutes($method, $uri);
+    registerEmpleadoRoutes($method, $uri);
 
     Response::error(404, "Ruta no encontrada ($method $uri)");
 

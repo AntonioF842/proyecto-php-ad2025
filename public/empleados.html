@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light boder-bottom px-3">
+        <span class="navbar-brand">Panel de Empleado</span>
+        <button class="btn btn-outline-danger btn-sm">
+            Salir
+        </button>
+    </nav>
+
+    <div class="container py-4">
+        <h3 class="mb-3">Empleado</h3>
+        <div class="card p-3 mb-4">
+            <div class="row g-2">
+                <div class="col md-3">
+                    <label class="form-label">Nombre</label>
+                    <input class="form-control" id="nombre">
+                </div>
+                                <div class="col md-3">
+                    <label class="form-label">A. paterno</label>
+                    <input class="form-control" id="apaterno">
+                </div>
+                                <div class="col md-3">
+                    <label class="form-label">A. materno</label>
+                    <input class="form-control" id="amaterno">
+                </div>
+                                <div class="col md-3">
+                    <label class="form-label">Usuario</label>
+                    <input class="form-control" id="usuarioEmp">
+                </div>
+                                <div class="col md-3">
+                    <label class="form-label">Password</label>
+                    <input class="form-control" type="password" id="password">
+                </div>
+                <div class="div col-md-3">
+                    <label class="form-label">Rol</label>
+                    <select id="rol" class="form-control">
+                        <option value="user">user</option>
+                        <option value="admin">admin</option>
+                    </select>
+                </div>
+                <div class="div col-md-3">
+                    <label class="form-label">Telefono</label>
+                    <input  class="form-control" id="telefono">
+                </div>
+                <div class="div col-md-3">
+                    <label class="form-label">Ciudad</label>
+                    <input  class="form-control" id="ciudad">
+                </div>
+                <div class="div col-md-3">
+                    <label class="form-label">Estado</label>
+                    <input  class="form-control" id="estado">
+                </div>
+                <div class="div col-md-3">
+                    <label class="form-label">Direccion</label>
+                    <input  class="form-control" id="direccion">
+                </div>
+
+                <div class="col-12 d-flex gap-2 mt-3">
+                    <button class="btn-success" id="btnguardar">Guardar Nuevo</button>`
+                    <button class="btn-warning d-none" id="btnActualizar">Actualizar</button>
+                    <button class="btn btn-secunday d-none" id="btnCancelar">Cancelar</button>
+                </div>
+
+                <div class="col-12 text-danger small" id="formMsg">
+                    
+                </div>
+            </div>
+            <table class="table table-bodered table-striped align-middle" id="tablaEmpleados">
+                <thead class="table-light">
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Usuario</th>
+                        <th>Rol</th>
+                        <th>Telefono</th>
+                        <th>Ciudad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/empleados.js"></script>
+  </body>
+</html>

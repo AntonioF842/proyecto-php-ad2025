@@ -26,4 +26,22 @@
             $nuevo = $this->repo->create($data);
             return [true, $nuevo->toPubli()];
         }
+        public function deleteEmpleado($id) {
+            $ok = $this->repo->delete($id);
+            return $ok ? [true, "Empleado eliminado"] : [false, "No se encontró el empleado"];
+        }
+
+    public function updateEmpleado($id, $data) {
+        if (isset($data['password']) && $data['password'] !== '') {
+            $data['password'] = Password::hash($data['password']);
+        } else {
+            unset($data['password']);
+        }
+
+        $actualizado = $this->repo->update($id, $data);
+        if (!$actualizado) {
+            return [false, "No se encontró el empleado"];
+        }
+        return [true, $actualizado->toPubli()];
+    }
     }
